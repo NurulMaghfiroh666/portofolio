@@ -3,143 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0b10" />
-  <meta name="description" content="Nurul Maghfiroh — Mahasiswa S1 Informatika di ITSK DR. Soepraoen Malang. Berpengalaman dalam analisis sistem, rekayasa web, perbaikan hardware PC/laptop, dan perancangan aplikasi HAKI." />
-  <title>Nurul Maghfiroh — S1 Informatika &amp; IT Solutions</title>
+  <meta name="theme-color" content="#f3f0e8" />
+  <meta name="description" content="Portofolio Nurul Maghfiroh — S1 Informatika ITSK DR. Soepraoen Malang. Analisis sistem, pengembangan web, perbaikan hardware PC/laptop, dan Hak Cipta Hearsee." />
+  <title>Nurul Maghfiroh — Portofolio S1 Informatika</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Ke konten utama</a>
+
   <!-- HEADER NAVIGATION -->
   <header class="site-nav">
-    <a href="#top" class="brand-lockup" aria-label="Nurul Maghfiroh, kembali ke atas">
-      <span class="brand-mark">maghf.</span>
-      <span class="brand-name label">Nurul Maghfiroh / S1 Informatika</span>
-    </a>
-    <nav class="nav-links" aria-label="Navigasi Utama">
-      <a href="#projects" class="nav-link label">Proyek</a>
-      <a href="#skills" class="nav-link label">Keahlian</a>
-      <a href="#certificates" class="nav-link label">Sertifikasi</a>
-      <a href="#journey" class="nav-link label">Pengalaman</a>
-      <a href="#contact" class="nav-link label">Kontak</a>
-    </nav>
+    <div class="nav-inner wrap">
+      <a href="#top" class="brand" aria-label="Nurul Maghfiroh, kembali ke atas">
+        <span class="brand-name">Nurul Maghfiroh</span>
+        <span class="brand-role mono">S1 Informatika</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span id="nav-toggle-label">Menu</span>
+      </button>
+      <nav class="nav-links" id="nav-menu" aria-label="Navigasi Utama">
+        <a href="#projects" class="nav-link">Proyek</a>
+        <a href="#skills" class="nav-link">Keahlian</a>
+        <a href="#certificates" class="nav-link">Sertifikasi</a>
+        <a href="#journey" class="nav-link">Pengalaman</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="site-shell">
-    <!-- HERO SECTION (COMPACT & NATURAL SCROLL) -->
-    <section id="top" class="hero-stage">
-      <div class="hero-backdrop"></div>
-      <div class="hero-vignette"></div>
-
-      <!-- TOPLINE: LIVE WIB CLOCK -->
-      <div class="hero-topline">
-        <div class="hero-clock-box label">
-          <span class="live-clock-dot"></span>
-          <span class="hero-loc-tag">Malang, ID</span>
-          <span class="hero-clock-sep">·</span>
-          <span id="live-clock" class="hero-clock-val">09:00:00 WIB</span>
-        </div>
-      </div>
-
-      <!-- MAIN HERO CONTENT WITH PROMINENT PORTRAIT -->
-      <div class="hero-main">
-        <div class="hero-layout">
-          <!-- LEFT: IDENTITY & COPY -->
-          <div class="hero-copy-col">
-            <p class="hero-kicker label" data-hero-in>S1 Informatika · ITSK DR. Soepraoen Malang</p>
-
-            <h1 class="hero-title" data-hero-in>
-              Solusi Sistem &amp;<br />
-              <em>Rekayasa Perangkat Lunak.</em>
-            </h1>
-
-            <p class="hero-bio" data-hero-in>
-              Mahasiswa semester aktif S1 Informatika dengan fondasi kejuruan TKJ. Berpengalaman dalam perbaikan hardware PC/laptop, analisis sistem informasi desa, perancangan IoT, serta pemegang Hak Cipta (HAKI) resmi Kemenkumham RI. Siap berkontribusi maksimal pada posisi magang Web Development atau IT Support.
-            </p>
-
-            <!-- CREDENTIAL HIGHLIGHT TAGS -->
-            <div class="hero-highlights" data-hero-in>
-              <span class="hl-tag"><i class="hl-check">✓</i> Hak Cipta (HAKI) Hearsee</span>
-              <span class="hl-tag"><i class="hl-check">✓</i> PKL Teknisi PC &amp; Laptop</span>
-              <span class="hl-tag"><i class="hl-check">✓</i> Kompetensi Kejuruan TKJ</span>
-              <span class="hl-tag"><i class="hl-check">✓</i> Sekretaris IPNU (2022–2027)</span>
-            </div>
+  <main id="main" class="site-shell">
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow mono" data-hero-in>
+            <span>Portofolio / 2026</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span>Malang, Jawa Timur</span>
           </div>
 
-          <!-- RIGHT: LARGE PROFILE PHOTO SHOWCASE -->
-          <div class="hero-portrait-col" data-hero-in>
-            <div class="hero-portrait-card">
-              <div class="portrait-glow"></div>
-              <div class="portrait-glow-navy"></div>
-              <div class="portrait-frame">
-                <!-- Top floating micro status -->
-                <div class="portrait-status-pill">
-                  <span class="live-clock-dot"></span>
-                  <span>Siap Magang · Web &amp; IT</span>
-                </div>
-                <!-- Crisp Portrait Image -->
-                <img src="images/profile.jpg" alt="Foto Nurul Maghfiroh - Mahasiswa S1 Informatika" class="portrait-img" />
-                <!-- Dark Studio Lighting Vignette Overlay -->
-                <div class="portrait-overlay"></div>
-                <!-- Elegant Glassmorphic Bottom Identity Plate -->
-                <div class="portrait-caption">
-                  <div class="portrait-caption-header">
-                    <span class="p-verified-badge" title="Profil Terverifikasi">
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </span>
-                    <span class="p-caption-name">Nurul Maghfiroh</span>
-                  </div>
-                  <div class="portrait-caption-details">
-                    <span class="p-caption-role">S1 Informatika · ITSK DR. Soepraoen</span>
-                    <span class="p-caption-loc">📍 Malang, Jawa Timur</span>
-                  </div>
-                </div>
-              </div>
+          <h1 class="hero-title" data-hero-in>
+            Dari laptop yang mati<br />
+            sampai <span class="accent">alur surat desa</span>.
+          </h1>
+
+          <p class="hero-lead" data-hero-in>
+            Mahasiswa semester aktif S1 Informatika di ITSK DR. Soepraoen Malang dengan latar SMK TKJ. Terbiasa menangani perbaikan PC/laptop, memetakan alur layanan administrasi desa, dan merakit prototipe IoT. Karya Aplikasi Hearsee tercatat sebagai Hak Cipta di Kemenkumham RI.
+          </p>
+
+          <dl class="facts" data-hero-in>
+            <div>
+              <dt class="mono">Fokus</dt>
+              <dd>Web development · IT support · Analisis sistem</dd>
             </div>
+            <div>
+              <dt class="mono">Domisili</dt>
+              <dd>Malang, Jawa Timur</dd>
+            </div>
+            <div>
+              <dt class="mono">Kredensial</dt>
+              <dd>Hak Cipta Hearsee — Kemenkumham RI</dd>
+            </div>
+            <div>
+              <dt class="mono">Organisasi</dt>
+              <dd>Sekretaris IPNU, 2022–2027</dd>
+            </div>
+          </dl>
+
+          <div class="hero-actions" data-hero-in>
+            <a class="link-cta" href="#projects">Lihat proyek <span aria-hidden="true">↓</span></a>
+            <a class="link-cta link-cta--muted" href="#contact">Hubungi</a>
           </div>
         </div>
-      </div>
 
-      <!-- BOTTOM META & SCROLL INDICATOR -->
-      <div class="hero-bottom">
-        <a href="#projects" class="hero-scroll-cue" aria-label="Gulir ke bagian Proyek">
-          <span class="scroll-mouse-icon">
-            <span class="scroll-wheel-dot"></span>
-          </span>
-          <span class="label scroll-cue-text">Gulir untuk eksplorasi</span>
-        </a>
-
-        <div class="hero-social-links">
-          <a href="https://wa.me/62859171616019" target="_blank" rel="noreferrer" class="hero-soc-btn" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24"/></svg>
-          </a>
-          <a href="https://github.com/NurulMaghfiroh666" target="_blank" rel="noreferrer" class="hero-soc-btn" aria-label="GitHub">
-            <svg viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
-          </a>
-          <a href="mailto:maghf2010@gmail.com" class="hero-soc-btn" aria-label="Email">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 4.99L4 6zm0 12H4V8l8 5 8-5z"/></svg>
-          </a>
+        <div class="hero-side" data-hero-in>
+          <figure class="hero-photo">
+            <img src="images/profile.jpg" alt="Foto Nurul Maghfiroh, mahasiswa S1 Informatika ITSK DR. Soepraoen Malang" />
+            <figcaption class="mono">Nurul Maghfiroh · Malang, 2026</figcaption>
+          </figure>
+          <p class="hero-avail mono">
+            <span class="avail-dot" aria-hidden="true"></span>
+            Terbuka untuk magang — Web Dev / IT Support
+          </p>
         </div>
-
-        <span class="hero-tz label">Asia/Jakarta · GMT+7</span>
       </div>
     </section>
 
-    <!-- SECTION: PROJECTS (PORTOFOLIO TERPILIH) -->
+    <!-- SECTION: PROJECTS -->
     <section id="projects" class="projects-section">
-      <div class="section-head projects-head" data-rv>
-        <div>
-          <p class="label head-label">Implementasi Nyata</p>
-          <h2 class="display-title">Karya &amp; Proyek <em>Terpilih.</em></h2>
-        </div>
-        <span class="label head-count">05 Portofolio</span>
-      </div>
+      <div class="wrap section-body">
+        <header class="section-head" data-rv>
+          <span class="section-index mono">01</span>
+          <div>
+            <h2 class="section-title">Proyek</h2>
+            <p class="section-note">Sistem informasi desa, prototipe IoT, dan aplikasi web/mobile.</p>
+          </div>
+          <span class="section-count mono">05 total</span>
+        </header>
 
-      <div class="projects-grid">
+        <div class="projects-grid">
         <!-- PROJECT 01: SI DESA GONDOWANGI -->
-        <article class="p-card" style="--card-accent: #6366f1;">
+        <article class="p-card">
           <div class="p-media">
             <button type="button" class="p-photo-btn" data-project-preview aria-label="Lihat poster proyek Sistem Informasi Desa Gondowangi">
               <img src="images/SID-Gondowangi.jpeg" alt="Poster Sistem Informasi Desa Gondowangi — Kelompok 4 SIDG" loading="lazy" />
@@ -148,12 +116,10 @@
                 Lihat Poster
               </span>
             </button>
-            <span class="p-ghost">01</span>
           </div>
           <div class="p-body">
             <div class="p-meta">
-              <span class="label">01 — Analisis Sistem · Web</span>
-              <i class="p-dot"></i>
+              <span class="mono">01 — Analisis Sistem · Web</span>
             </div>
             <div class="p-title-row">
               <h3 class="p-title">SI Desa Gondowangi</h3>
@@ -180,7 +146,7 @@
         </article>
 
         <!-- PROJECT 02: THERMOGUN PINTAR -->
-        <article class="p-card" style="--card-accent: #a855f7;">
+        <article class="p-card">
           <div class="p-media">
             <button type="button" class="p-photo-btn p-photo-btn--center" data-project-preview aria-label="Lihat foto perangkat Thermogun Pintar">
               <img src="images/termo.png" alt="Perangkat Thermogun Pintar hasil perakitan dan pengujian sensor" loading="lazy" />
@@ -189,12 +155,10 @@
                 Lihat Foto
               </span>
             </button>
-            <span class="p-ghost">02</span>
           </div>
           <div class="p-body">
             <div class="p-meta">
-              <span class="label">02 — IoT · Hardware · Sensor</span>
-              <i class="p-dot"></i>
+              <span class="mono">02 — IoT · Hardware · Sensor</span>
             </div>
             <div class="p-title-row">
               <h3 class="p-title">Perangkat Thermogun Pintar</h3>
@@ -220,7 +184,7 @@
         </article>
 
         <!-- PROJECT 03: ALEXA COMPUTER -->
-        <article class="p-card" style="--card-accent: #c084fc;">
+        <article class="p-card">
           <div class="p-media">
             <button type="button" class="p-photo-btn p-photo-btn--center" data-project-preview aria-label="Lihat foto bengkel Alexa Computer">
               <img src="images/alexa.png" alt="Bengkel Alexa Computer Malang dengan banner layanan servis komputer" loading="lazy" />
@@ -229,12 +193,10 @@
                 Lihat Foto
               </span>
             </button>
-            <span class="p-ghost">03</span>
           </div>
           <div class="p-body">
             <div class="p-meta">
-              <span class="label">03 — IT Support · Hardware Bengkel</span>
-              <i class="p-dot"></i>
+              <span class="mono">03 — IT Support · Hardware Bengkel</span>
             </div>
             <div class="p-title-row">
               <h3 class="p-title">Alexa Computer Support</h3>
@@ -264,7 +226,7 @@
       <div class="projects-more" hidden>
         <div class="projects-grid">
           <!-- PROJECT 04: MAKAN YUK (MOBILE APP) -->
-          <article class="p-card" style="--card-accent: #fb923c;">
+          <article class="p-card">
             <div class="p-media">
               <button type="button" class="p-photo-btn" data-project-preview aria-label="Lihat tangkapan layar aplikasi Makan Yuk">
                 <img src="images/makanyuk.png" alt="Tangkapan layar aplikasi mobile Makan Yuk — beranda menu makanan dan minuman" loading="lazy" />
@@ -273,12 +235,10 @@
                   Lihat Foto
                 </span>
               </button>
-              <span class="p-ghost">04</span>
             </div>
             <div class="p-body">
               <div class="p-meta">
-                <span class="label">04 — Mobile App · Backend API</span>
-                <i class="p-dot"></i>
+                <span class="mono">04 — Mobile App · Backend API</span>
               </div>
               <div class="p-title-row">
                 <h3 class="p-title">Makan Yuk</h3>
@@ -305,7 +265,7 @@
           </article>
 
           <!-- PROJECT 05: SANITACHECK -->
-          <article class="p-card" style="--card-accent: #6366f1;">
+          <article class="p-card">
             <div class="p-media">
               <button type="button" class="p-photo-btn" data-project-preview aria-label="Lihat tangkapan layar SanitaCheck">
                 <img src="images/SanitaCheck.png" alt="Tangkapan layar SanitaCheck — halaman Pusat Laporan" loading="lazy" />
@@ -314,12 +274,10 @@
                   Lihat Foto
                 </span>
               </button>
-              <span class="p-ghost">05</span>
             </div>
             <div class="p-body">
               <div class="p-meta">
-                <span class="label">05 — Pemrograman Web · PHP Native</span>
-                <i class="p-dot"></i>
+                <span class="mono">05 — Pemrograman Web · PHP Native</span>
               </div>
               <div class="p-title-row">
                 <h3 class="p-title">SanitaCheck</h3>
@@ -347,97 +305,102 @@
         </div>
       </div>
 
-      <div class="projects-actions">
-        <button type="button" class="btn-viewall" id="view-all">
-          Lihat Semua Portofolio
-          <span class="btn-circle">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1v14M1 8l7 7 7-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span class="btn-count">+2</span>
-        </button>
+        <div class="projects-actions">
+          <button type="button" class="btn-viewall" id="view-all">
+            Lihat semua portofolio
+            <span class="btn-circle">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1v14M1 8l7 7 7-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="btn-count">+2</span>
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION: SKILLS (KEAHLIAN & PENGUASAAN TEKNOLOGI) -->
+    <!-- SECTION: SKILLS -->
     <section id="skills" class="skills-section">
-      <div class="section-head" data-rv>
-        <div>
-          <p class="label head-label">Kompetensi Teknis</p>
-          <h2 class="display-title">Keahlian &amp; <em>Teknologi.</em></h2>
-        </div>
-        <p class="label skills-hint" aria-live="polite">Arahkan kursor atau ketuk keahlian untuk membaca rincian.</p>
-      </div>
+      <div class="wrap section-body">
+        <header class="section-head" data-rv>
+          <span class="section-index mono">02</span>
+          <div>
+            <h2 class="section-title">Keahlian</h2>
+            <p class="section-note">Lima kelompok: hardware, jaringan, web, analisis sistem, administrasi.</p>
+          </div>
+          <span class="section-count mono">20 item</span>
+        </header>
 
-      <div class="skills-groups">
+        <div class="skills-groups">
         <!-- GROUP 1 -->
         <div class="skills-group" data-rv>
-          <span class="label group-name">Hardware &amp; Dukungan Teknis</span>
+          <span class="mono group-name">Hardware &amp; Dukungan Teknis</span>
           <ul class="skills-row">
-            <li class="sk" tabindex="0" data-desc="Diagnosa keluhan kerusakan hardware dan software PC/Laptop secara terstruktur dan presisi.">Hardware Troubleshooting</li>
-            <li class="sk" tabindex="0" data-desc="Perbaikan komponen internal, penggantian pasta pendingin & pembersihan menyeluruh.">Component Repair</li>
-            <li class="sk" tabindex="0" data-desc="Pemeliharaan berkala untuk menjaga stabilitas suhu dan performa komputasi perangkat.">Device Maintenance</li>
-            <li class="sk" tabindex="0" data-desc="Pengujian komprehensif stabilitas fungsi komponen dan sistem pasca perbaikan.">Quality &amp; Stress Testing</li>
+            <li class="sk">Hardware Troubleshooting</li>
+            <li class="sk">Component Repair</li>
+            <li class="sk">Device Maintenance</li>
+            <li class="sk">Quality &amp; Stress Testing</li>
           </ul>
         </div>
 
         <!-- GROUP 2 -->
         <div class="skills-group" data-rv>
-          <span class="label group-name">Sistem Operasi &amp; Jaringan</span>
+          <span class="mono group-name">Sistem Operasi &amp; Jaringan</span>
           <ul class="skills-row">
-            <li class="sk" tabindex="0" data-desc="Instalasi bersih Windows OS, penataan partisi disk, dan optimasi driver hardware.">Instalasi Windows OS</li>
-            <li class="sk" tabindex="0" data-desc="Pengkabelan UTP, pengalamatan IP, subnetting, dan instalasi topologi LAN dasar.">Dasar Jaringan (LAN)</li>
-            <li class="sk" tabindex="0" data-desc="Setup software pendukung operasional kerja, instalasi tools teknis, dan utilitas kantor.">Konfigurasi Software</li>
-            <li class="sk" tabindex="0" data-desc="Pemahaman protokol komunikasi data TCP/IP dan skema konektivitas jaringan lokal.">Protokol Jaringan (TCP/IP)</li>
+            <li class="sk">Instalasi Windows OS</li>
+            <li class="sk">Dasar Jaringan (LAN)</li>
+            <li class="sk">Konfigurasi Software</li>
+            <li class="sk">Protokol Jaringan (TCP/IP)</li>
           </ul>
         </div>
 
         <!-- GROUP 3 -->
         <div class="skills-group" data-rv>
-          <span class="label group-name">Pengembangan Web &amp; Basis Data</span>
+          <span class="mono group-name">Pengembangan Web &amp; Basis Data</span>
           <ul class="skills-row">
-            <li class="sk" tabindex="0" data-desc="Pengembangan aplikasi web terstruktur dengan logika pemrosesan data backend.">PHP</li>
-            <li class="sk" tabindex="0" data-desc="Penyusunan markup web semantik, styling responsif, dan layout antarmuka modern.">HTML5 / CSS3</li>
-            <li class="sk" tabindex="0" data-desc="Manipulasi DOM, penanganan event dinamis, dan validasi form interaktif.">JavaScript Dasar</li>
-            <li class="sk" tabindex="0" data-desc="Perancangan skema relasional, query SQL terstruktur, dan manajemen integritas data.">MySQL / Basis Data</li>
+            <li class="sk">PHP</li>
+            <li class="sk">HTML5 / CSS3</li>
+            <li class="sk">JavaScript Dasar</li>
+            <li class="sk">MySQL / Basis Data</li>
           </ul>
         </div>
 
         <!-- GROUP 4 -->
         <div class="skills-group" data-rv>
-          <span class="label group-name">Analisis Sistem &amp; Rekayasa</span>
+          <span class="mono group-name">Analisis Sistem &amp; Rekayasa</span>
           <ul class="skills-row">
-            <li class="sk" tabindex="0" data-desc="Pengumpulan data lapangan dan identifikasi kebutuhan operasional instansi pemerintah/klien.">Analisis Sistem Informasi</li>
-            <li class="sk" tabindex="0" data-desc="Perancangan alur proses kerja, flowchart alur data administratif, dan diagram fungsional.">Workflow &amp; Flowchart</li>
-            <li class="sk" tabindex="0" data-desc="Penerapan prinsip siklus hidup pengembangan perangkat lunak (SDLC) yang teruji.">Software Engineering Dasar</li>
-            <li class="sk" tabindex="0" data-desc="Perakitan sirkuit pengukur suhu tubuh otomatis nirsentuh berbasis mikrokontroler.">Prototipe IoT</li>
+            <li class="sk">Analisis Sistem Informasi</li>
+            <li class="sk">Workflow &amp; Flowchart</li>
+            <li class="sk">Software Engineering Dasar</li>
+            <li class="sk">Prototipe IoT</li>
           </ul>
         </div>
 
         <!-- GROUP 5 -->
         <div class="skills-group" data-rv>
-          <span class="label group-name">Administrasi &amp; Produktivitas</span>
+          <span class="mono group-name">Administrasi &amp; Produktivitas</span>
           <ul class="skills-row">
-            <li class="sk" tabindex="0" data-desc="Penyusunan tata naskah dinas, penomoran surat resmi, dan pembuatan laporan kesekretariatan.">Microsoft Word Tingkat Lanjut</li>
-            <li class="sk" tabindex="0" data-desc="Manajemen versi kode sumber repositori proyek dan kolaborasi tim menggunakan Git.">Git &amp; GitHub</li>
-            <li class="sk" tabindex="0" data-desc="Editor utama penulisan kode dengan konfigurasi ekstensi penunjang produktivitas.">VS Code</li>
-            <li class="sk" tabindex="0" data-desc="Sistematisasi penyimpanan dokumen penting secara rapi dan mudah diakses kembali.">Pengarsipan Dokumen</li>
+            <li class="sk">Microsoft Word Tingkat Lanjut</li>
+            <li class="sk">Git &amp; GitHub</li>
+            <li class="sk">VS Code</li>
+            <li class="sk">Pengarsipan Dokumen</li>
           </ul>
         </div>
+        </div>
       </div>
-      <p class="skills-mobile label">Troubleshooting · Jaringan LAN · PHP · MySQL · Analisis Sistem · IoT</p>
     </section>
 
-    <!-- SECTION: CERTIFICATES & CREDENTIALS (DOKUMENTASI RESMI) -->
+    <!-- SECTION: CERTIFICATES -->
     <section id="certificates" class="cert-section">
-      <div class="section-head" data-rv>
-        <div>
-          <p class="label head-label">Dokumentasi Resmi</p>
-          <h2 class="display-title"><em>Sertifikasi.</em></h2>
-        </div>
-        <span class="label head-count">03 Kredensial</span>
-      </div>
+      <div class="wrap section-body">
+        <header class="section-head" data-rv>
+          <span class="section-index mono">03</span>
+          <div>
+            <h2 class="section-title">Sertifikasi</h2>
+            <p class="section-note">Dokumen resmi yang bisa dibuka dan diperiksa langsung.</p>
+          </div>
+          <span class="section-count mono">03 kredensial</span>
+        </header>
 
-      <div class="cert-grid">
+        <div class="cert-grid">
         <!-- CERT 1: HAKI HEARSEE -->
         <article class="cert-card" data-rv>
           <div>
@@ -533,135 +496,129 @@
           </div>
         </article>
       </div>
+      </div>
     </section>
 
-    <!-- SECTION: JOURNEY (REKAM JEJAK & PENGALAMAN) -->
+    <!-- SECTION: JOURNEY -->
     <section id="journey" class="journey-section">
-      <div class="section-head" data-rv>
-        <div>
-          <p class="label head-label">Perjalanan Karier</p>
-          <h2 class="display-title">Rekam Jejak &amp; <em>Pengalaman.</em></h2>
-        </div>
-      </div>
+      <div class="wrap section-body">
+        <header class="section-head" data-rv>
+          <span class="section-index mono">04</span>
+          <div>
+            <h2 class="section-title">Pengalaman</h2>
+            <p class="section-note">2021 sampai sekarang, berurutan.</p>
+          </div>
+          <span class="section-count mono">05 tahap</span>
+        </header>
 
-      <div class="tl">
-        <div class="line"></div>
+        <ol class="timeline">
+          <li class="tl-item" data-rv>
+            <p class="tl-when mono">2021 — 2024</p>
+            <div>
+              <h3 class="tl-title">SMK El-Hayat — Teknik Komputer &amp; Jaringan</h3>
+              <p class="tl-desc">Menempuh studi kejuruan TKJ: perakitan komputer, troubleshooting perangkat keras dan lunak, instalasi kabel LAN, subnetting, serta dasar logika pemrograman.</p>
+            </div>
+          </li>
 
-        <div class="j-item">
-          <span class="j-num">01</span>
-          <i class="j-dot"></i>
-          <p class="j-in label">Tahap 01 · 2021 – 2024</p>
-          <h3 class="j-in j-title">Fondasi Kejuruan (SMK El-Hayat)</h3>
-          <p class="j-in j-desc">Menempuh studi kejuruan Teknik Komputer dan Jaringan (TKJ). Membangun fondasi mendalam dalam perakitan komputer, troubleshooting perangkat keras dan lunak, instalasi kabel LAN, subnetting, serta logika dasar pemrograman.</p>
-        </div>
+          <li class="tl-item" data-rv>
+            <p class="tl-when mono">2022 · semasa SMK</p>
+            <div>
+              <h3 class="tl-title">PKL Teknisi &amp; IT Support — Alexa Computer</h3>
+              <p class="tl-desc">Menangani puluhan perangkat PC dan laptop pelanggan di bengkel komputer Alexa Computer Malang: diagnosa kerusakan hardware, penggantian komponen, pembersihan thermal paste, instalasi Windows, dan pengujian pasca-perbaikan.</p>
+            </div>
+          </li>
 
-        <div class="j-item">
-          <span class="j-num">02</span>
-          <i class="j-dot"></i>
-          <p class="j-in label">Tahap 02 · 2022 (Semasa SMK)</p>
-          <h3 class="j-in j-title">Praktik Kerja Lapangan / PKL (Alexa Computer)</h3>
-          <p class="j-in j-desc">Menjalani PKL sebagai Teknisi &amp; IT Support di bengkel komputer profesional Alexa Computer Malang — dilakukan saat masih menempuh pendidikan SMK El-Hayat. Dipercaya menangani puluhan perangkat PC/laptop pelanggan, penggantian komponen, instalasi Windows, dan perawatan rutin.</p>
-        </div>
+          <li class="tl-item" data-rv>
+            <p class="tl-when mono">2022 — 2027</p>
+            <div>
+              <h3 class="tl-title">Sekretaris IPNU Ranting &amp; Anak Cabang</h3>
+              <p class="tl-desc">Mengelola administrasi kesekretariatan resmi organisasi: penyusunan dan penomoran surat dinas dengan Microsoft Word, serta pengarsipan dokumen secara terstruktur.</p>
+            </div>
+          </li>
 
-        <div class="j-item">
-          <span class="j-num">03</span>
-          <i class="j-dot"></i>
-          <p class="j-in label">Tahap 03 · 2022 – 2027</p>
-          <h3 class="j-in j-title">Tata Kelola Organisasi (Sekretaris IPNU)</h3>
-          <p class="j-in j-desc">Menjabat sebagai Sekretaris IPNU Ranting dan Anak Cabang. Mengelola tata kelola administrasi kesekretariatan resmi organisasi, penyusunan dan penomoran surat resmi dinas menggunakan Microsoft Word, serta pengarsipan dokumen secara terstruktur.</p>
-        </div>
+          <li class="tl-item" data-rv>
+            <p class="tl-when mono">2024 — sekarang</p>
+            <div>
+              <h3 class="tl-title">S1 Informatika — ITSK DR. Soepraoen Malang</h3>
+              <p class="tl-desc">Melanjutkan pendidikan tinggi di Program Studi S1 Informatika dan aktif di HIMA Informatika. Memperdalam rekayasa perangkat lunak, perancangan web, analisis sistem, dan manajemen basis data.</p>
+            </div>
+          </li>
 
-        <div class="j-item">
-          <span class="j-num">04</span>
-          <i class="j-dot"></i>
-          <p class="j-in label">Tahap 04 · 2024 – Sekarang</p>
-          <h3 class="j-in j-title">S1 Informatika (ITSK DR. Soepraoen)</h3>
-          <p class="j-in j-desc">Melanjutkan pendidikan tinggi di Program Studi S1 Informatika ITSK DR. Soepraoen Malang serta berkontribusi aktif dalam organisasi HIMA Informatika. Memperdalam rekayasa perangkat lunak, perancangan web, analisis sistem, dan manajemen basis data.</p>
-        </div>
-
-        <div class="j-item">
-          <span class="j-num">05</span>
-          <i class="j-dot"></i>
-          <p class="j-in label">Tahap 05 · Inovasi Nyata</p>
-          <h3 class="j-in j-title">Inovasi Proyek &amp; Hak Cipta (HAKI)</h3>
-          <p class="j-in j-desc">Berperan sebagai System Analyst dalam perancangan Sistem Informasi Desa Gondowangi, perakitan perangkat keras IoT Thermogun Pintar, serta berkontribusi dalam pembuatan Aplikasi Digital Hearsee yang berhasil resmi terdaftar Hak Cipta (HAKI) Kemenkumham RI.</p>
-        </div>
+          <li class="tl-item" data-rv>
+            <p class="tl-when mono">2025 — 2026</p>
+            <div>
+              <h3 class="tl-title">Proyek sistem, IoT, dan Hak Cipta Hearsee</h3>
+              <p class="tl-desc">Berperan sebagai System Analyst pada Sistem Informasi Desa Gondowangi, merakit perangkat IoT Thermogun Pintar, dan berkontribusi pada Aplikasi Digital Hearsee yang terdaftar sebagai Hak Cipta Kemenkumham RI.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- SECTION: CONTACT & COLLABORATION -->
-    <section id="contact" class="contact-section">
-      <div class="contact-backdrop">
-        <canvas class="contact-canvas" role="img" aria-label="Animasi interaktif Quantum Violet Grid"></canvas>
-      </div>
-      <div class="contact-glow"></div>
-      <div class="contact-inner">
-        <div class="contact-left">
-          <p class="label head-label" data-rv>Mari Berkolaborasi</p>
-          <h2 class="contact-title">Membangun Solusi<br /><em>Bersama.</em></h2>
-          <p class="contact-lead" data-rv>
-            Saat ini aktif sebagai mahasiswa S1 Informatika dan sedang mencari peluang magang di bidang IT Support, pengembangan web, atau analisis sistem. Juga terbuka untuk kolaborasi proyek tim atau kontribusi open source. Hubungi saya melalui salah satu saluran komunikasi resmi berikut.
-          </p>
-        </div>
-
-        <div class="contact-right" data-rv>
-          <p class="label find-label">Saluran Komunikasi Resmi</p>
-
-          <a href="https://wa.me/62859171616019" target="_blank" rel="noreferrer" class="find-card">
-            <span class="find-icon" style="color: #22c55e; border-color: rgba(34, 197, 94, 0.3);">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2"/></svg>
-            </span>
-            <span class="find-text">
-              <span class="find-name">WhatsApp</span>
-              <span class="find-sub">+62 859-1716-16019 (Respon Cepat)</span>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="find-arrow"><path fill="currentColor" fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"/></svg>
-          </a>
-
-          <a href="https://github.com/NurulMaghfiroh666" target="_blank" rel="noreferrer" class="find-card">
-            <span class="find-icon">
-              <svg viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
-            </span>
-            <span class="find-text">
-              <span class="find-name">GitHub</span>
-              <span class="find-sub">github.com/NurulMaghfiroh666</span>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="find-arrow"><path fill="currentColor" fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"/></svg>
-          </a>
-
-          <a href="mailto:maghf2010@gmail.com" class="find-card">
-            <span class="find-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 4.99L4 6zm0 12H4V8l8 5 8-5z"/></svg>
-            </span>
-            <span class="find-text">
-              <span class="find-name">Email</span>
-              <span class="find-sub">maghf2010@gmail.com</span>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="find-arrow"><path fill="currentColor" fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"/></svg>
-          </a>
-
-          <div class="find-card find-card-static">
-            <span class="find-icon" style="color: var(--purple); border-color: rgba(168, 85, 247, 0.3);">
-              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-            </span>
-            <span class="find-text">
-              <span class="find-name">Domisili</span>
-              <span class="find-sub">Malang, Jawa Timur, Indonesia</span>
-            </span>
+    <!-- SECTION: CONTACT -->
+    <section id="contact" class="contact">
+      <div class="wrap contact-inner">
+        <header class="section-head section-head--on-ink" data-rv>
+          <span class="section-index mono">05</span>
+          <div>
+            <h2 class="section-title">Kontak</h2>
+            <p class="section-note">Balasan paling cepat lewat WhatsApp.</p>
           </div>
-        </div>
-      </div>
+          <span class="section-count mono">Malang, ID</span>
+        </header>
 
-      <footer class="site-footer">
-        <span class="label">© <span id="year">2026</span> Nurul Maghfiroh — S1 Informatika ITSK DR. Soepraoen Malang</span>
-      </footer>
+        <div class="contact-grid">
+          <div data-rv>
+            <p class="contact-title">Mari <span class="accent">bicara</span>.</p>
+            <p class="contact-lead">
+              Terbuka untuk magang di bidang IT Support, pengembangan web, atau analisis sistem — juga untuk kolaborasi proyek tim dan kontribusi open source.
+            </p>
+          </div>
+
+          <ul class="contact-list" data-rv>
+            <li>
+              <a class="contact-row" href="https://wa.me/62859171616019" target="_blank" rel="noreferrer">
+                <span class="contact-name">WhatsApp</span>
+                <span class="contact-val mono">+62 859-1716-16019</span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-row" href="mailto:maghf2010@gmail.com">
+                <span class="contact-name">Email</span>
+                <span class="contact-val mono">maghf2010@gmail.com</span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-row" href="https://github.com/NurulMaghfiroh666" target="_blank" rel="noreferrer">
+                <span class="contact-name">GitHub</span>
+                <span class="contact-val mono">NurulMaghfiroh666</span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <span class="contact-row">
+                <span class="contact-name">Domisili</span>
+                <span class="contact-val mono">Malang, Jawa Timur</span>
+                <span class="contact-arrow contact-arrow--static" aria-hidden="true">—</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <footer class="site-footer">
+          <p class="mono">© <span id="year">2026</span> Nurul Maghfiroh — S1 Informatika, ITSK DR. Soepraoen Malang</p>
+          <p class="mono">HTML · CSS · JavaScript</p>
+        </footer>
+      </div>
     </section>
   </main>
 
   <!-- LIGHTBOX / CERTIFICATE MODAL -->
-  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content">
-      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Tutup popup">✕</button>
+  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-content" tabindex="-1">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Tutup detail">×</button>
       <div class="modal-header">
         <p id="modal-category" class="modal-category">Kredensial Resmi</p>
         <h3 id="modal-title" class="modal-title">Nama Sertifikat</h3>
@@ -681,17 +638,12 @@
         <p id="modal-desc">Deskripsi lengkap kredensial atau pencapaian sertifikasi.</p>
       </div>
       <div id="modal-images" class="modal-images" hidden></div>
-      <div style="display: flex; justify-content: flex-end;">
-        <button type="button" onclick="document.getElementById('modal-close-btn').click()" class="cert-btn" style="border-color: var(--purple); color: var(--purple);">
-          Tutup Kredensial
-        </button>
+      <div class="modal-actions">
+        <button type="button" class="cert-btn" data-modal-close>Tutup</button>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
