@@ -222,7 +222,7 @@ em { font-style: normal; }
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 4.75rem 6vw 0;
   pointer-events: none;
 }
@@ -858,9 +858,86 @@ em { font-style: normal; }
   background: linear-gradient(135deg, #0d0515 0%, #130824 60%, #0a0510 100%);
 }
 
-/* gondowangi */
-.p-visual-gondowangi {
-  background: linear-gradient(135deg, #060a1a 0%, #0c1230 60%, #060a1a 100%);
+/* gondowangi poster photo */
+.p-photo-btn {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: #0c1220;
+  cursor: zoom-in;
+}
+
+.p-photo-btn img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-photo-btn--center img {
+  object-position: center center;
+}
+
+.p-photo-btn::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 26%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(6,8,16,0.88) 0%, rgba(6,8,16,0.35) 45%, rgba(6,8,16,0) 100%);
+}
+
+.p-card:hover .p-photo-btn img,
+.p-photo-btn:focus-visible img {
+  transform: scale(1.035);
+}
+
+.p-photo-btn:focus-visible {
+  outline: 2px solid var(--purple-soft);
+  outline-offset: -2px;
+}
+
+.p-photo-zoom {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.7rem;
+  border: 1px solid rgba(255,255,255,0.26);
+  border-radius: var(--radius-pill);
+  background: rgba(8,10,18,0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.p-photo-zoom svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.p-photo-btn:hover .p-photo-zoom,
+.p-photo-btn:focus-visible .p-photo-zoom {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 /* IoT */
@@ -1437,6 +1514,92 @@ em { font-style: normal; }
   text-transform: uppercase;
 }
 
+/* certificate document preview */
+.cert-preview {
+  margin: 1.15rem 0 0;
+}
+
+.cert-preview-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  background: #f6f0e0;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 0.7rem;
+  cursor: zoom-in;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.cert-preview-btn:hover,
+.cert-preview-btn:focus-visible {
+  border-color: rgba(168,85,247,0.55);
+  box-shadow: 0 12px 30px -14px rgba(168,85,247,0.55);
+  outline: none;
+}
+
+.cert-preview-btn img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-preview-btn:hover img,
+.cert-preview-btn:focus-visible img {
+  transform: scale(1.035);
+}
+
+.cert-preview-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(10,11,16,0.78);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.cert-preview-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1.9rem 0.5rem 0.55rem;
+  background: linear-gradient(to top, rgba(5,5,9,0.88), rgba(5,5,9,0));
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.cert-preview-overlay svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.cert-preview-btn:hover .cert-preview-overlay,
+.cert-preview-btn:focus-visible .cert-preview-overlay {
+  opacity: 1;
+}
+
 /* ── MODAL ───────────────────────────────────────────────── */
 .cert-modal {
   position: fixed;
@@ -1463,6 +1626,9 @@ em { font-style: normal; }
   position: relative;
   max-width: 36rem;
   width: 100%;
+  max-height: calc(100vh - 2.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: #111317;
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: 1.25rem;
@@ -1556,6 +1722,44 @@ em { font-style: normal; }
   border-radius: 0.6rem;
   border: 1px solid rgba(255,255,255,0.08);
   margin-bottom: 1.5rem;
+}
+
+.modal-images {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-images[hidden] {
+  display: none;
+}
+
+.modal-images figure {
+  margin: 0;
+  padding: 0.55rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.75rem;
+}
+
+.modal-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 58vh;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  background: #f6f0e0;
+}
+
+.modal-images figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
 }
 
 /* ── JOURNEY ─────────────────────────────────────────────── */
@@ -2067,9 +2271,9 @@ em { font-style: normal; }
     max-width: 28rem;
   }
 
-  /* 4 col cert grid on very wide screens */
+  /* 3 col cert grid on very wide screens */
   .cert-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .portrait-frame {
@@ -2085,11 +2289,6 @@ em { font-style: normal; }
     padding: 4.75rem 1.25rem 0;
   }
 
-  /* hide long status text on small screens */
-  .hero-status-pill .label {
-    display: none;
-  }
-
   .hero-main {
     padding: 1.5rem 1.25rem 1rem;
   }
@@ -2101,23 +2300,6 @@ em { font-style: normal; }
   .hero-bio {
     font-size: 0.875rem;
     max-width: 100%;
-  }
-
-  /* hero actions wrap properly */
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-
-  .btn-hero-primary,
-  .btn-hero-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .btn-hero-tertiary {
-    align-self: flex-start;
   }
 
   .hero-highlights {

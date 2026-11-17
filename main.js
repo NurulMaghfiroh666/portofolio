@@ -281,6 +281,32 @@
   var modalDesc = document.getElementById("modal-desc");
   var modalYear = document.getElementById("modal-year");
   var modalStatus = document.getElementById("modal-status");
+  var modalImages = document.getElementById("modal-images");
+
+  function renderModalImages(btn) {
+    if (!modalImages) return;
+    var raw = btn.getAttribute("data-img") || "";
+    var sources = raw.split("|").filter(Boolean);
+    modalImages.innerHTML = "";
+    if (!sources.length) {
+      modalImages.hidden = true;
+      return;
+    }
+    var title = btn.getAttribute("data-title") || "Sertifikat";
+    var label = btn.getAttribute("data-img-label") || "Dokumen Sertifikat";
+    sources.forEach(function (src, index) {
+      var figure = document.createElement("figure");
+      var img = document.createElement("img");
+      img.src = src;
+      img.alt = title + (index === 0 ? " — " + label : " — lampiran pencipta");
+      figure.appendChild(img);
+      var caption = document.createElement("figcaption");
+      caption.textContent = index === 0 ? label : "Lampiran Pencipta";
+      figure.appendChild(caption);
+      modalImages.appendChild(figure);
+    });
+    modalImages.hidden = false;
+  }
 
   function openModal(btn) {
     if (!certModal) return;
@@ -290,6 +316,7 @@
     if (modalDesc) modalDesc.textContent = btn.getAttribute("data-desc") || "";
     if (modalYear) modalYear.textContent = btn.getAttribute("data-year") || "-";
     if (modalStatus) modalStatus.textContent = btn.getAttribute("data-status") || "Terverifikasi";
+    renderModalImages(btn);
     certModal.classList.add("active");
     certModal.setAttribute("aria-hidden", "false");
     if (lenis) lenis.stop();
@@ -299,6 +326,7 @@
     if (!certModal) return;
     certModal.classList.remove("active");
     certModal.setAttribute("aria-hidden", "true");
+    if (modalImages) modalImages.hidden = true;
     if (lenis) lenis.start();
   }
 
@@ -306,6 +334,24 @@
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       openModal(btn);
+    });
+  });
+
+  /* document previews open the matching card credential */
+  document.querySelectorAll("[data-cert-preview]").forEach(function (preview) {
+    preview.addEventListener("click", function () {
+      var card = preview.closest(".cert-card");
+      var trigger = card ? card.querySelector(".btn-cert-modal") : null;
+      if (trigger) trigger.click();
+    });
+  });
+
+  /* project media previews open their detail modal */
+  document.querySelectorAll("[data-project-preview]").forEach(function (preview) {
+    preview.addEventListener("click", function () {
+      var card = preview.closest(".p-card");
+      var trigger = card ? card.querySelector(".btn-cert-modal") : null;
+      if (trigger) trigger.click();
     });
   });
 
