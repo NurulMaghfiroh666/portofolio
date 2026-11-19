@@ -201,37 +201,6 @@
     });
   });
 
-  /* ── CERTIFICATE FLIPPER (SISI BOLAK-BALIK DOKUMEN) ─── */
-  document.querySelectorAll("[data-cert-flipper]").forEach(function (flipper) {
-    var pills = flipper.querySelectorAll(".cert-flip-pill");
-    var img = flipper.querySelector(".cert-preview-btn img");
-    if (!pills.length || !img) return;
-
-    pills.forEach(function (pill) {
-      pill.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var targetSrc = pill.getAttribute("data-flip-src");
-        if (!targetSrc || img.getAttribute("src") === targetSrc) return;
-
-        pills.forEach(function (p) { p.classList.remove("is-active"); });
-        pill.classList.add("is-active");
-
-        img.style.opacity = "0.35";
-        img.style.transition = "opacity 0.2s ease, transform 0.2s ease";
-        img.style.transform = "scale(0.98)";
-
-        var temp = new Image();
-        temp.onload = function () {
-          img.src = targetSrc;
-          img.style.opacity = "1";
-          img.style.transform = "";
-        };
-        temp.src = targetSrc;
-      });
-    });
-  });
-
   /* certificate document previews open the matching credential */
   document.querySelectorAll("[data-cert-preview]").forEach(function (preview) {
     preview.addEventListener("click", function () {

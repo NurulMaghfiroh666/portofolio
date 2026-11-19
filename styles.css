@@ -763,55 +763,6 @@ button {
   margin-top: 1.25rem;
 }
 
-.cert-flipper-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-bottom: 0.5rem;
-  padding: 0.2rem;
-  background: var(--paper-sunk);
-  border: 1px solid var(--rule);
-  width: fit-content;
-}
-
-.cert-flip-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.22rem 0.6rem;
-  background: transparent;
-  border: 1px solid transparent;
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.cert-flip-pill:hover {
-  color: var(--ink);
-  background: var(--paper);
-}
-
-.cert-flip-pill.is-active {
-  background: var(--paper);
-  border-color: var(--rule-strong);
-  color: var(--ink);
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
-.cert-flip-pill.is-active::before {
-  content: "";
-  display: inline-block;
-  width: 0.35rem;
-  height: 0.35rem;
-  background: var(--accent);
-  border-radius: 50%;
-}
-
 .cert-preview-btn {
   position: relative;
   display: block;
