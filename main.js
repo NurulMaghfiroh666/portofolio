@@ -121,20 +121,28 @@
     modalImages.innerHTML = "";
     if (!sources.length) {
       modalImages.hidden = true;
+      modalImages.classList.remove("has-multiple");
       return;
+    }
+    if (sources.length > 1) {
+      modalImages.classList.add("has-multiple");
+    } else {
+      modalImages.classList.remove("has-multiple");
     }
     var title = btn.getAttribute("data-title") || "Sertifikat";
     var label = btn.getAttribute("data-img-label") || "Dokumen Sertifikat";
+    var labels = (btn.getAttribute("data-img-labels") || "").split("|");
     sources.forEach(function (src, index) {
+      var captionText = labels[index] || (index === 0 ? label : "Lampiran Pencipta");
       var figure = document.createElement("figure");
       var img = document.createElement("img");
       img.src = src;
-      img.alt = title + (index === 0 ? " — " + label : " — lampiran pencipta");
+      img.alt = title + " — " + captionText;
       img.loading = "eager";
       img.decoding = "async";
       figure.appendChild(img);
       var caption = document.createElement("figcaption");
-      caption.textContent = index === 0 ? label : "Lampiran Pencipta";
+      caption.textContent = captionText;
       figure.appendChild(caption);
       modalImages.appendChild(figure);
     });
@@ -190,6 +198,37 @@
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       openModal(btn);
+    });
+  });
+
+  /* ── CERTIFICATE FLIPPER (SISI BOLAK-BALIK DOKUMEN) ─── */
+  document.querySelectorAll("[data-cert-flipper]").forEach(function (flipper) {
+    var pills = flipper.querySelectorAll(".cert-flip-pill");
+    var img = flipper.querySelector(".cert-preview-btn img");
+    if (!pills.length || !img) return;
+
+    pills.forEach(function (pill) {
+      pill.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var targetSrc = pill.getAttribute("data-flip-src");
+        if (!targetSrc || img.getAttribute("src") === targetSrc) return;
+
+        pills.forEach(function (p) { p.classList.remove("is-active"); });
+        pill.classList.add("is-active");
+
+        img.style.opacity = "0.35";
+        img.style.transition = "opacity 0.2s ease, transform 0.2s ease";
+        img.style.transform = "scale(0.98)";
+
+        var temp = new Image();
+        temp.onload = function () {
+          img.src = targetSrc;
+          img.style.opacity = "1";
+          img.style.transform = "";
+        };
+        temp.src = targetSrc;
+      });
     });
   });
 
